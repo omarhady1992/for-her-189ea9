@@ -1,0 +1,101 @@
+/* For Her: extra styling on top of theme.json */
+html { scroll-behavior: smooth; }
+body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+::selection { background: #E8D9C5; color: #5B1A3A; }
+
+/* Eyebrow / small caps label */
+.is-style-eyebrow, .eyebrow { font-size: .75rem !important; letter-spacing: .22em; text-transform: uppercase; color: #800020; font-weight: 500; }
+
+/* Header */
+.site-header { border-bottom: 1px solid rgba(209,179,153,.45); background: rgba(251,248,243,.92); backdrop-filter: blur(6px); position: sticky; top: 0; z-index: 50; }
+.admin-bar .site-header { top: 32px; }
+.site-brand img { display: block; }
+.wp-block-navigation .wp-block-navigation-item__content { padding: .35rem 0; border-bottom: 1px solid transparent; transition: border-color .2s, color .2s; }
+.wp-block-navigation .wp-block-navigation-item__content:hover,
+.wp-block-navigation .current-menu-item > .wp-block-navigation-item__content { color: #800020; border-bottom-color: #D1B399; text-decoration: none; }
+
+/* Rose divider */
+.rose-divider, hr.wp-block-separator.is-style-rose {
+  border: 0 !important; height: 28px; max-width: 240px !important; width: 240px; margin-left: auto !important; margin-right: auto !important;
+  background: url(../images/divider.svg) center / contain no-repeat; opacity: 1; }
+
+/* Hero */
+.hero { position: relative; overflow: hidden; }
+.hero::before, .hero::after { content: ""; position: absolute; width: 220px; height: 220px; background: url(../images/petal.svg) center / contain no-repeat; pointer-events: none; }
+.hero::before { top: -40px; right: 6%; transform: rotate(25deg); }
+.hero::after { bottom: -60px; left: 4%; transform: rotate(-35deg) scale(.8); }
+.hero .wp-block-cover__inner-container { position: relative; z-index: 1; }
+.hero-rose img { width: 64px; height: auto; margin: 0 auto; display: block; }
+.hero h1 em { color: #800020; }
+
+/* Cards */
+.fav-card { background: #fff; border: 1px solid rgba(209,179,153,.5); border-radius: 14px; transition: transform .25s, box-shadow .25s; height: 100%; }
+.fav-card:hover { transform: translateY(-3px); box-shadow: 0 14px 30px -18px rgba(91,26,58,.35); }
+.fav-icon { width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; background: #F4ECE1; font-size: 1.4rem; color: #800020; font-family: "Cormorant Garamond", serif; margin-bottom: .25rem !important; }
+.fav-icon img { width: 30px; height: 30px; }
+.swatches { display: flex; gap: .5rem; margin: .5rem 0 0; }
+.swatches span { width: 30px; height: 30px; border-radius: 50%; border: 2px solid #fff; box-shadow: 0 0 0 1px rgba(91,26,58,.15); }
+
+/* Placeholder text: clearly visible as "to be written" */
+.placeholder, .is-placeholder { color: #7A6670; font-style: italic; background: rgba(232,217,197,.35); border-left: 3px solid #D1B399; padding: .6rem 1rem; border-radius: 0 6px 6px 0; }
+.placeholder-badge { display: inline-block; font-size: .68rem !important; letter-spacing: .16em; text-transform: uppercase; background: #DCE8F3; color: #5B1A3A; padding: .2rem .7rem; border-radius: 999px; font-weight: 600; }
+
+/* Post cards in query loops */
+.post-card { background: #fff; border: 1px solid rgba(209,179,153,.45); border-radius: 12px; overflow: hidden; height: 100%; transition: transform .25s, box-shadow .25s; }
+.post-card:hover { transform: translateY(-3px); box-shadow: 0 16px 34px -20px rgba(91,26,58,.4); }
+.post-card .wp-block-post-featured-image { margin: 0; }
+.post-card .wp-block-post-featured-image img { border-radius: 0 !important; aspect-ratio: 4/3; object-fit: cover; }
+.wp-block-post-template.is-layout-grid > li { height: 100%; }
+
+/* Timeline (Our Story) */
+.is-style-timeline { position: relative; padding-left: 2.75rem !important; }
+.is-style-timeline::before { content: ""; position: absolute; left: .95rem; top: .5rem; bottom: .5rem; width: 1px; background: linear-gradient(#D1B399, #9DBAD5); }
+.is-style-timeline > .wp-block-group { position: relative; }
+.is-style-timeline > .wp-block-group::before { content: ""; position: absolute; left: -2.35rem; top: .35rem; width: 22px; height: 22px; border-radius: 50%; background: #FBF8F3 url(../images/favicon.svg) center / 22px no-repeat; box-shadow: 0 0 0 4px #FBF8F3; }
+.timeline-date { font-size: .75rem !important; letter-spacing: .2em; text-transform: uppercase; color: #800020; font-weight: 600; margin-bottom: .2rem !important; }
+
+/* Letters: letter paper */
+.is-style-letter-paper {
+  background: #FFFDF9; background-image: repeating-linear-gradient(transparent 0 2.15rem, rgba(157,186,213,.28) 2.15rem calc(2.15rem + 1px));
+  border: 1px solid rgba(209,179,153,.55); border-radius: 4px; box-shadow: 0 22px 40px -28px rgba(91,26,58,.45);
+  padding: clamp(1.5rem, 5vw, 3.5rem) !important; font-family: "Cormorant Garamond", Georgia, serif; font-size: 1.35rem; line-height: 2.15rem; color: #3B2A33; }
+
+.is-style-letter-paper p { margin-top: 0; margin-bottom: 2.15rem; }
+.letter-signoff { text-align: right; font-style: italic; color: #5B1A3A; }
+
+/* Poems: centered verse */
+.is-style-verse { text-align: center; font-family: "Cormorant Garamond", Georgia, serif; font-size: 1.45rem; line-height: 1.9; font-style: italic; color: #5B1A3A; }
+.is-style-verse p { margin-left: auto; margin-right: auto; }
+.wp-block-verse { font-family: "Cormorant Garamond", Georgia, serif; font-size: 1.45rem; font-style: italic; text-align: center; background: none; color: #5B1A3A; white-space: pre-wrap; }
+
+/* Poems list */
+.poem-item { text-align: center; border-bottom: 1px solid rgba(209,179,153,.45); }
+
+/* Gallery placeholder tag */
+.memories-gallery figure { overflow: hidden; border-radius: 8px; }
+.memories-gallery img { transition: transform .5s; }
+.memories-gallery figure:hover img { transform: scale(1.04); }
+
+/* Footer */
+.site-footer { border-top: 1px solid rgba(209,179,153,.45); }
+
+@media (max-width: 781px) {
+  .hero::before, .hero::after { width: 140px; height: 140px; }
+  .is-style-timeline { padding-left: 2.25rem !important; }
+}
+
+/* Rose mark before site title */
+.site-header .wp-block-site-title a { display: inline-flex; align-items: center; gap: .55rem; }
+.site-header .wp-block-site-title a::before { content: ""; width: 30px; height: 30px; background: url(../images/rose.svg) center / contain no-repeat; flex: none; }
+.hero-rose { width: 64px; height: 72px; margin: 0 auto !important; background: url(../images/rose.svg) center / contain no-repeat; }
+.rose-mark { width: 40px; height: 44px; margin: 0 auto !important; background: url(../images/rose.svg) center / contain no-repeat; }
+.wp-site-blocks > * + * { margin-block-start: 0 !important; }
+.fav-card .swatches { margin: .4rem 0 .35rem; }
+.fav-card .swatches span { width: 34px; height: 34px; }
+.hero h1 { max-width: 21ch; margin-left: auto; margin-right: auto; }
+/* Letters and poems: the words are the focus, so hide the featured image on the single view */
+body.is-letter main > .wp-block-post-featured-image, body.is-poem main > .wp-block-post-featured-image { display: none; }
+body.is-letter main .entry-content, body.is-poem main .entry-content { margin-top: var(--wp--preset--spacing--40); }
+.is-style-letter-paper { max-width: 720px; margin-left: auto !important; margin-right: auto !important; }
+.hero h1, .hero .wp-block-heading { color: #5B1A3A !important; }
+.hero::before, .hero::after { opacity: .55; z-index: 1; }
